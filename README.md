@@ -2,6 +2,12 @@
 
 This project for android platform
 
+## Demo
+<div style="dispaly:flex">
+    <img src="/video-demo.mp4" width="24%">
+</div>
+
+
 ##### sample json
 ```
 {
