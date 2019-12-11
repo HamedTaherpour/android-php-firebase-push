@@ -43,7 +43,6 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
             final String title = jsonObject.getString("title");
             final String description = jsonObject.getString("description");
             final String image = jsonObject.getString("imageUrl");
-            final String languageTitle = jsonObject.getString("languageTitle");
 
             Glide.with(this)
                     .asBitmap()
@@ -51,13 +50,13 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
                     .listener(new RequestListener<Bitmap>() {
                         @Override
                         public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
-                            showNotification(title, description, null, languageTitle, id);
+                            showNotification(title, description, null, id);
                             return false;
                         }
 
                         @Override
                         public boolean onResourceReady(Bitmap resource, Object model, Target<Bitmap> target, DataSource dataSource, boolean isFirstResource) {
-                            showNotification(title, description, resource, languageTitle, id);
+                            showNotification(title, description, resource, id);
                             return false;
                         }
                     })
@@ -67,7 +66,7 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
         }
     }
 
-    private void showNotification(String title, String description, Bitmap bitmap, String languageTitle, int id) {
+    private void showNotification(String title, String description, Bitmap bitmap, int id) {
         // Create an Intent for the activity you want to start
         Intent resultIntent = new Intent(this, MainActivity.class);
         resultIntent.putExtra("id", id);
@@ -81,7 +80,6 @@ public class MyFireBaseMessagingService extends FirebaseMessagingService {
                 .setSmallIcon(R.drawable.notification_icon)
                 .setContentTitle(title)
                 .setContentText(description)
-                .setSubText(languageTitle)
                 .setTicker(getString(R.string.app_name))
                 .setContentIntent(resultPendingIntent);
 
