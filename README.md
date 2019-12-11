@@ -4,7 +4,7 @@ This project for android platform
 
 ## Demo
 <div style="dispaly:flex">
-    <img src="/video-demo.mp4" width="24%">
+    <img src="/video-demo.gif" width="24%">
 </div>
 
 
