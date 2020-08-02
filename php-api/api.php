@@ -1,8 +1,8 @@
-<!--
-    Author: Hamed Taherpour
-    Created: 12/11/2019
--->
 <?php
+/*
+	Author: Hamed Taherpour
+	Created: 12/11/2019
+*/
 
 define( 'API_ACCESS_KEY', '--firebase panel/Cloud Messaging/Server key--' );
 
