@@ -7,6 +7,8 @@ This project for android platform
     <img src="/video-demo.gif" width="24%">
 </div>
 
+<hr>
+
 <details><summary><b>Sample JSON</b></summary>
     
 ```
